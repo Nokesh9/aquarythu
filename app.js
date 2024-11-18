@@ -7,6 +7,7 @@ const userOtpVerificationRoutes = require("./routes/otpVerificationRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const subcategoryRoutes = require("./routes/subcategoryRoutes");
 const postRoutes = require("./routes/postRoutes")
+const storeRoutes = require("./routes/storeRoutes");
 
 const app = express();
 const PORT = 3000;
@@ -20,6 +21,7 @@ app.use("/api/user-otp-verification", userOtpVerificationRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/subcategories", subcategoryRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api", storeRoutes);
 
 // Sync database and start the server
 sequelize.sync({ alter: true }) // force: true will drop tables first
