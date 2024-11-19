@@ -1,5 +1,6 @@
 const UserOtpVerification = require("../models/otpVerification");
 
+
 const UserOtpVerificationController = {
   // Create a new record
   create: async (req, res) => {
