@@ -1,8 +1,8 @@
 const { Sequelize } = require("sequelize");
 
 // Configure Sequelize instance
-const sequelize = new Sequelize("aquarythu", "root", "Nani@4043", {
-  host: "localhost",
+const sequelize = new Sequelize("aquarythu", "root", "YourNewPassword@123", {
+  host: "3.110.90.3",
   dialect: "mysql",
 });
 

@@ -9,6 +9,8 @@ const subcategoryRoutes = require("./routes/subcategoryRoutes");
 const postRoutes = require("./routes/postRoutes")
 const storecategoryRoutes = require("./routes/storecategoryRoutes");
 const userStorePostRoutes = require("./routes/userstorepostRoutes");
+const uploadRoutes = require('./routes/uploadRoutes');
+
 
 const app = express();
 const PORT = 3000;
@@ -24,7 +26,7 @@ app.use("/api/subcategories", subcategoryRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/storecategories", storecategoryRoutes);
 app.use("/api/userstore", userStorePostRoutes);
-
+app.use("/api/bucket", uploadRoutes);
 
 // Sync database and start the server
 sequelize.sync({ alter: true }) // force: true will drop tables first
