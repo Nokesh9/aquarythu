@@ -15,6 +15,11 @@ const uploadRoutes = require('./routes/uploadRoutes');
 const app = express();
 const PORT = 3000;
 
+// Default Route for Showing a Message
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to the API Server!</h1><p>API is running on port 3000.</p>");
+});
+
 // Middleware
 app.use(bodyParser.json());
 
